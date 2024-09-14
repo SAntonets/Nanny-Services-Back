@@ -4,6 +4,7 @@ import cors from 'cors';
 
 import { env } from './utils/env.js';
 
+
 const PORT = Number(env('PORT', '3000'));
 
 export const startServer = () => {
@@ -19,6 +20,7 @@ export const startServer = () => {
             },
         })
     )
+
 
     app.use((req, res, next) => {
         console.log(`Time: ${new Date().toLocaleString()}`);
